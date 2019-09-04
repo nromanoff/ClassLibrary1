@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryLib", "ClassLibrary1\GeometryLib.csproj", "{EABACFF7-4958-4C0A-A861-618A4B3CA412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToRun", "ToRun\ToRun.csproj", "{A2C99AF8-9DF4-43A6-9D2E-26FD943E962D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryLibTest", "GeometryLibTest\GeometryLibTest.csproj", "{BDCE301D-8E73-4C56-836B-316E3C7110B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EABACFF7-4958-4C0A-A861-618A4B3CA412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABACFF7-4958-4C0A-A861-618A4B3CA412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABACFF7-4958-4C0A-A861-618A4B3CA412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABACFF7-4958-4C0A-A861-618A4B3CA412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C99AF8-9DF4-43A6-9D2E-26FD943E962D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C99AF8-9DF4-43A6-9D2E-26FD943E962D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C99AF8-9DF4-43A6-9D2E-26FD943E962D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C99AF8-9DF4-43A6-9D2E-26FD943E962D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDCE301D-8E73-4C56-836B-316E3C7110B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCE301D-8E73-4C56-836B-316E3C7110B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCE301D-8E73-4C56-836B-316E3C7110B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCE301D-8E73-4C56-836B-316E3C7110B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51217C27-1E02-4902-8178-16AA5CE7E977}
+	EndGlobalSection
+EndGlobal
