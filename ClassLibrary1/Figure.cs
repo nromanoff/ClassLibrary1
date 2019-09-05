@@ -5,11 +5,11 @@ namespace GeometryLib
     /// <summary>
     /// All figures parent class
     /// </summary>
-    public class Figure
+    public abstract class Figure
     {
-        public float Metric1;
-        public float Metric2;
-        public float Koeff;
+        public float Metric1 { get; set; }
+        public float Metric2 { get; set; }
+        public float Koeff { get; set; }
 
         /// <summary>
         /// Constructor with 3 metrics, 
