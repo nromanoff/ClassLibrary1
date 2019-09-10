@@ -7,10 +7,6 @@ namespace GeometryLib
     /// </summary>
     public abstract class Figure
     {
-        public float Metric1 { get; set; }
-        public float Metric2 { get; set; }
-        public float Koeff { get; set; }
-
         /// <summary>
         /// Constructor with 3 metrics, 
         /// which can be used for area calculation
@@ -18,22 +14,15 @@ namespace GeometryLib
         /// for rectangle S = a * b
         /// etc
         /// </summary>
-        /// <param name="Metric1">first metric</param>
-        /// <param name="Metric2">second metric</param>
-        /// <param name="Koeff">numeric coefficient</param>
-        public Figure(float Metric1, float Metric2, float Koeff)
-        {
-            this.Metric1 = Metric1;
-            this.Metric2 = Metric2;
-            this.Koeff = Koeff;
-        }
+        public Figure()
+        {}
         /// <summary>
         /// method to calculate the area
         /// </summary>
         /// <returns> float value of area </returns>
         public virtual float CalcS()
         {
-            return this.Metric1 * this.Metric2 * this.Koeff;
+            return 0;
         }
 
         /// <summary>
@@ -42,7 +31,6 @@ namespace GeometryLib
         public virtual void ReportFigure()
         {
             Console.WriteLine("This is some Figure\n");
-            Console.WriteLine("Its square may be calculated as Metric1 * Metric2 * Koeff\n");
             Console.WriteLine("Square is {0}", this.CalcS());
         }
     }

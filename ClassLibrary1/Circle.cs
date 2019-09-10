@@ -14,12 +14,16 @@ namespace GeometryLib
         /// </summary>
         /// <param name="r">float r radius</param>
         public Circle(float r)
-            :base(r, r, (float)Math.PI)
         {
             this.Radius = r;
-            Metric1 = r;
-            Metric2 = r;
-            Koeff = (float)Math.PI;
+        }
+        /// <summary>
+        /// method to calcualate area of a circle
+        /// </summary>
+        /// <returns>area value</returns>
+        public override float CalcS()
+        {
+            return (float)(Math.PI * Math.Pow(this.Radius, 2));
         }
 
         /// <summary>
