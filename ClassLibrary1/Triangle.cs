@@ -11,6 +11,7 @@ namespace GeometryLib
         public float SideB { get; set; }
         public float SideC { get; set; }
         bool Rect;
+        float[] abc = { 0f, 0f, 0f};
 
         /// <summary>
         /// Main constructor
@@ -19,7 +20,6 @@ namespace GeometryLib
         /// <param name="b">side b</param>
         /// <param name="c">side c</param>
         public Triangle(float a, float b, float c)
-            : base(0, 0, 0)
         {
             this.SideA = a;
             this.SideB = b;
@@ -36,10 +36,10 @@ namespace GeometryLib
             double S = 0;
             float p = 0;
             if (this.Rect)
-                S = base.CalcS();
+                S = abc[0] * abc[1] * 0.5f;
             else
             {
-                p = SideA + SideB + SideC;
+                p = abc[0] + abc[1] + abc[2];
                 S = Math.Sqrt(p * (p - SideA) * (p - SideB) * (p - SideC));
             }
             return (float)S;
@@ -53,15 +53,11 @@ namespace GeometryLib
         public bool IsRect()
         {
             bool IsRect;
-            float[] abc = { SideA, SideB, SideC };
+            abc[0] = SideA;
+            abc[1] = SideB;
+            abc[2] = SideC;
             Array.Sort(abc);
             IsRect =  Math.Pow(abc[0], 2) + Math.Pow(abc[1], 2) == Math.Pow(abc[2], 2);
-            if (IsRect)
-            {
-                Metric1 = abc[0];
-                Metric2 = abc[1];
-                Koeff = 0.5f;
-            }
             return IsRect;
         }
 
