@@ -7,9 +7,9 @@ namespace GeometryLib
     /// </summary>
     public class Triangle : Figure
     {
-        float a;
-        float b;
-        float c;
+        public float SideA { get; set; }
+        public float SideB { get; set; }
+        public float SideC { get; set; }
         bool Rect;
 
         /// <summary>
@@ -21,9 +21,9 @@ namespace GeometryLib
         public Triangle(float a, float b, float c)
             : base(0, 0, 0)
         {
-            this.a = a;
-            this.b = b;
-            this.c = c;
+            this.SideA = a;
+            this.SideB = b;
+            this.SideC = c;
             this.Rect = IsRect();
         }
 
@@ -39,8 +39,8 @@ namespace GeometryLib
                 S = base.CalcS();
             else
             {
-                p = a + b + c;
-                S = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+                p = SideA + SideB + SideC;
+                S = Math.Sqrt(p * (p - SideA) * (p - SideB) * (p - SideC));
             }
             return (float)S;
         }
@@ -53,7 +53,7 @@ namespace GeometryLib
         public bool IsRect()
         {
             bool IsRect;
-            float[] abc = { a, b, c };
+            float[] abc = { SideA, SideB, SideC };
             Array.Sort(abc);
             IsRect =  Math.Pow(abc[0], 2) + Math.Pow(abc[1], 2) == Math.Pow(abc[2], 2);
             if (IsRect)
@@ -70,7 +70,7 @@ namespace GeometryLib
         /// </summary>
         public override void ReportFigure()
         {
-            Console.WriteLine("This is Triangle a = {0}, b = {1}, c = {2}, S = {3}", a, b, c, this.CalcS());
+            Console.WriteLine("This is Triangle a = {0}, b = {1}, c = {2}, S = {3}", SideA, SideB, SideC, this.CalcS());
             if (this.Rect)
                 Console.WriteLine("It is Square");
             else
